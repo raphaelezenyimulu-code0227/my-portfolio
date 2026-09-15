@@ -6,21 +6,27 @@
  * Works out-of-the-box in all modern browsers without CORS or build requirements.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function startApp() {
   // Grab structured data from window (provided by js/projects.js)
   const projectsData = window.projectsData || [];
   const skillsData = window.skillsData || { disciplines: [], languages: [], frameworks: [], tools: [], softSkills: [] };
   const academicData = window.academicData || { education: [], certifications: [], honors: [] };
 
-  initTheme();
-  initNavigation();
-  initSkillsSection(skillsData);
-  initProjectsSection(projectsData);
-  initAcademicSection(academicData);
-  initContactForm();
-  initBackToTop();
-  initEmailCopy();
-});
+  try { initTheme(); } catch (e) { console.error('Theme init error:', e); }
+  try { initNavigation(); } catch (e) { console.error('Navigation init error:', e); }
+  try { initSkillsSection(skillsData); } catch (e) { console.error('Skills init error:', e); }
+  try { initProjectsSection(projectsData); } catch (e) { console.error('Projects init error:', e); }
+  try { initAcademicSection(academicData); } catch (e) { console.error('Academic init error:', e); }
+  try { initContactForm(); } catch (e) { console.error('Contact init error:', e); }
+  try { initBackToTop(); } catch (e) { console.error('BackToTop init error:', e); }
+  try { initEmailCopy(); } catch (e) { console.error('EmailCopy init error:', e); }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startApp);
+} else {
+  startApp();
+}
 
 /* ==========================================================================
    1. THEME TOGGLE (Dark / Light Mode)
@@ -484,7 +490,13 @@ function openCaseStudyModal(projectId, projectsData) {
     </div>
   `;
 
-  modal.showModal();
+  if (typeof modal.showModal === 'function') {
+    if (!modal.open) {
+      modal.showModal();
+    }
+  } else {
+    modal.setAttribute('open', '');
+  }
   document.body.classList.add('modal-open');
 
   // Close handlers
@@ -492,7 +504,11 @@ function openCaseStudyModal(projectId, projectsData) {
   const footerCloseBtn = document.getElementById('modalFooterCloseBtn');
 
   const closeModal = () => {
-    modal.close();
+    if (typeof modal.close === 'function') {
+      modal.close();
+    } else {
+      modal.removeAttribute('open');
+    }
     document.body.classList.remove('modal-open');
   };
 
