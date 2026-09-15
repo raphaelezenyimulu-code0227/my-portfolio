@@ -46,7 +46,7 @@
       badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
       links: {
         demo: "https://pulsepredict-demo.example.com",
-        github: "https://github.com/yourusername/pulse-predict",
+        github: "https://github.com/raphaelezenyimulu-code0227/pulse-predict",
         docs: "https://arxiv.org/abs/example-pulse-predict"
       }
     },
@@ -76,8 +76,8 @@
       badgeColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
       links: {
         demo: "https://novacloud-demo.example.com",
-        github: "https://github.com/yourusername/novacloud-orchestrator",
-        docs: "https://github.com/yourusername/novacloud-orchestrator/wiki"
+        github: "https://github.com/raphaelezenyimulu-code0227/novacloud-orchestrator",
+        docs: "https://github.com/raphaelezenyimulu-code0227/novacloud-orchestrator/wiki"
       }
     },
     {
@@ -106,8 +106,8 @@
       badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
       links: {
         demo: "https://omnicommerce.example.com",
-        github: "https://github.com/yourusername/omnicommerce",
-        docs: "https://github.com/yourusername/omnicommerce#architecture"
+        github: "https://github.com/raphaelezenyimulu-code0227/omnicommerce",
+        docs: "https://github.com/raphaelezenyimulu-code0227/omnicommerce#architecture"
       }
     },
     {
@@ -136,8 +136,8 @@
       badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
       links: {
         demo: "https://graph-pathfinder.example.com",
-        github: "https://github.com/yourusername/graph-pathfinder-engine",
-        docs: "https://github.com/yourusername/graph-pathfinder-engine/blob/main/PAPER.md"
+        github: "https://github.com/raphaelezenyimulu-code0227/graph-pathfinder-engine",
+        docs: "https://github.com/raphaelezenyimulu-code0227/graph-pathfinder-engine/blob/main/PAPER.md"
       }
     },
     {
@@ -166,8 +166,8 @@
       badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
       links: {
         demo: "https://neuroscan-research.example.com",
-        github: "https://github.com/yourusername/neuroscan-vision",
-        docs: "https://github.com/yourusername/neuroscan-vision/blob/main/REPORT.pdf"
+        github: "https://github.com/raphaelezenyimulu-code0227/neuroscan-vision",
+        docs: "https://github.com/raphaelezenyimulu-code0227/neuroscan-vision/blob/main/REPORT.pdf"
       }
     },
     {
@@ -196,8 +196,8 @@
       badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
       links: {
         demo: "https://devpulse.example.com",
-        github: "https://github.com/yourusername/devpulse-analytics",
-        docs: "https://github.com/yourusername/devpulse-analytics#setup"
+        github: "https://github.com/raphaelezenyimulu-code0227/devpulse-analytics",
+        docs: "https://github.com/raphaelezenyimulu-code0227/devpulse-analytics#setup"
       }
     }
   ];

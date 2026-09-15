@@ -109,7 +109,7 @@ Open `js/projects.js` and add a new item to `projectsData`:
   gradient: "from-indigo-600 to-blue-500",
   links: {
     demo: "https://your-demo-url.com",
-    github: "https://github.com/yourusername/your-repo",
+    github: "https://github.com/raphaelezenyimulu-code0227/your-repo",
     docs: "https://your-docs-url.com"
   }
 }
