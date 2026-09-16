@@ -204,42 +204,37 @@
 
   const skillsData = {
     disciplines: [
-      { name: "Full-Stack Web Architecture", icon: "fa-solid fa-code", level: "Advanced" },
-      { name: "Data Structures & Algorithms", icon: "fa-solid fa-diagram-project", level: "Expert" },
-      { name: "Distributed Systems & Cloud", icon: "fa-solid fa-server", level: "Proficient" },
-      { name: "Applied Machine Learning", icon: "fa-solid fa-brain", level: "Proficient" },
-      { name: "UI/UX Design & Accessibility", icon: "fa-solid fa-wand-magic-sparkles", level: "Advanced" },
-      { name: "Database Design & Optimization", icon: "fa-solid fa-database", level: "Advanced" }
+      { name: "Medical Image Analysis", icon: "fa-solid fa-microscope", level: "Specialist" },
+      { name: "Clinical Radiography", icon: "fa-solid fa-x-ray", level: "Clinical Core" },
+      { name: "Healthcare Data Analytics", icon: "fa-solid fa-chart-line", level: "Specialist" },
+      { name: "Computer Vision", icon: "fa-solid fa-eye", level: "Advanced" },
+      { name: "Deep Learning", icon: "fa-solid fa-brain", level: "Advanced" },
+      { name: "Workflow Automation", icon: "fa-solid fa-gears", level: "Proficient" }
     ],
     languages: [
-      { name: "TypeScript / JavaScript", level: "Expert", experience: "4+ years" },
-      { name: "Python", level: "Advanced", experience: "3+ years" },
-      { name: "Go", level: "Intermediate", experience: "2 years" },
-      { name: "HTML5 / Semantic Web", level: "Expert", experience: "4+ years" },
-      { name: "CSS3 / Modern Tailwind", level: "Expert", experience: "4+ years" },
-      { name: "SQL (PostgreSQL)", level: "Advanced", experience: "3 years" }
+      { name: "Python", level: "Proficient", experience: "Medical image processing & deep learning" },
+      { name: "SQL", level: "Advanced", experience: "Healthcare database querying & extraction" },
+      { name: "Machine Learning", level: "Advanced", experience: "Supervised classification & neural models" }
     ],
     frameworks: [
-      { name: "React / Next.js", category: "Frontend" },
-      { name: "Tailwind CSS", category: "Styling" },
-      { name: "Node.js / Express", category: "Backend" },
-      { name: "FastAPI", category: "Backend" },
-      { name: "PyTorch & TensorFlow", category: "Data / ML" },
-      { name: "Jest / Vitest", category: "Testing" }
+      { name: "PyTorch", category: "Deep Learning" },
+      { name: "TensorFlow", category: "Deep Learning" },
+      { name: "OpenCV", category: "Computer Vision" },
+      { name: "MONAI", category: "Medical AI" },
+      { name: "SimpleITK", category: "Image Processing" },
+      { name: "Pandas", category: "Data Analytics" },
+      { name: "NumPy", category: "Scientific Computing" }
     ],
     tools: [
-      { name: "Git & GitHub Actions", category: "CI/CD" },
-      { name: "Docker Containerization", category: "DevOps" },
-      { name: "Linux / Bash Environment", category: "Systems" },
-      { name: "Postman & REST APIs", category: "API Tooling" },
-      { name: "Figma UI Prototyping", category: "Design" },
-      { name: "Vercel & Cloudflare", category: "Cloud Hosting" }
+      { name: "PACS/DICOM Viewers", category: "Clinical Imaging" },
+      { name: "Microsoft Excel", category: "Data Analysis" },
+      { name: "Power BI", category: "Visualization & BI" }
     ],
     softSkills: [
-      { title: "Technical Communication", desc: "Translating complex architectural concepts into clean, executive stakeholder documentation and diagrams." },
-      { title: "Agile & Scrum Delivery", desc: "Iterative sprint execution, thorough code review discipline, and proactive milestone estimation." },
-      { title: "Analytical Problem Solving", desc: "Root-cause debugging, profile-driven optimization, and systematic performance bottleneck resolution." },
-      { title: "Collaborative Leadership", desc: "Peer code reviews, lab mentoring, cross-functional project collaboration, and active open-source contribution." }
+      { title: "Clinical Empathy & Patient Care", desc: "Prioritizing patient safety, clear communication, and dignified care during diagnostic examinations." },
+      { title: "Interdisciplinary Collaboration", desc: "Communicating effectively across radiographers, clinical teams, physicians, and data engineers." },
+      { title: "Research & Analytical Rigor", desc: "Applying systematic hypothesis testing, evaluation metrics (ROC/AUC, sensitivity), and validation." },
+      { title: "Ethical AI & Privacy", desc: "Strict adherence to patient privacy, DICOM de-identification standards, and clinical AI governance." }
     ]
   };
 

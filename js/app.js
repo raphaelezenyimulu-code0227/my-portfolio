@@ -158,7 +158,7 @@ function initSkillsSection(skillsData) {
           <span class="font-semibold text-slate-900 dark:text-white text-sm">${item.name}</span>
           <span class="text-xs text-[#700B1A] dark:text-rose-400 font-medium">${item.level}</span>
         </div>
-        <p class="text-xs text-slate-500 dark:text-slate-400">${item.experience} experience</p>
+        <p class="text-xs text-slate-500 dark:text-slate-400">${item.experience}</p>
       </div>
     `).join('');
   }
