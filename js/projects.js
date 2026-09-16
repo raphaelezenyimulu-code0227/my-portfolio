@@ -204,37 +204,37 @@
 
   const skillsData = {
     disciplines: [
-      { name: "Medical Image Analysis", icon: "fa-solid fa-microscope", level: "Specialist" },
-      { name: "Clinical Radiography", icon: "fa-solid fa-x-ray", level: "Clinical Core" },
-      { name: "Healthcare Data Analytics", icon: "fa-solid fa-chart-line", level: "Specialist" },
-      { name: "Computer Vision", icon: "fa-solid fa-eye", level: "Advanced" },
-      { name: "Deep Learning", icon: "fa-solid fa-brain", level: "Advanced" },
-      { name: "Workflow Automation", icon: "fa-solid fa-gears", level: "Proficient" }
+      { name: "Medical Image Analysis", level: "Specialist", icon: "fa-solid fa-microscope" },
+      { name: "Clinical Radiography", level: "Clinical Core", icon: "fa-solid fa-x-ray" },
+      { name: "Healthcare Data Analytics", level: "Specialist", icon: "fa-solid fa-chart-line" },
+      { name: "Computer Vision", level: "Advanced", icon: "fa-solid fa-eye" },
+      { name: "Deep Learning", level: "Advanced", icon: "fa-solid fa-brain" },
+      { name: "Workflow Automation", level: "Proficient", icon: "fa-solid fa-gears" }
     ],
     languages: [
-      { name: "Python", level: "Proficient", experience: "Medical image processing & deep learning" },
-      { name: "SQL", level: "Advanced", experience: "Healthcare database querying & extraction" },
-      { name: "Machine Learning", level: "Advanced", experience: "Supervised classification & neural models" }
+      { name: "Python", detail: "Medical image processing & deep learning", icon: "fa-brands fa-python" },
+      { name: "SQL", detail: "Healthcare database querying & extraction", icon: "fa-solid fa-database" },
+      { name: "Machine Learning", detail: "Supervised classification & neural models", icon: "fa-solid fa-network-wired" }
     ],
-    frameworks: [
-      { name: "PyTorch", category: "Deep Learning" },
-      { name: "TensorFlow", category: "Deep Learning" },
-      { name: "OpenCV", category: "Computer Vision" },
-      { name: "MONAI", category: "Medical AI" },
-      { name: "SimpleITK", category: "Image Processing" },
-      { name: "Pandas", category: "Data Analytics" },
-      { name: "NumPy", category: "Scientific Computing" }
-    ],
-    tools: [
-      { name: "PACS/DICOM Viewers", category: "Clinical Imaging" },
-      { name: "Microsoft Excel", category: "Data Analysis" },
-      { name: "Power BI", category: "Visualization & BI" }
+    frameworksAndTools: [
+      {
+        group: "Deep Learning & Vision",
+        items: ["PyTorch", "TensorFlow", "OpenCV", "MONAI", "SimpleITK"]
+      },
+      {
+        group: "Data & Analytics",
+        items: ["Pandas", "NumPy", "Microsoft Excel", "Power BI"]
+      },
+      {
+        group: "Clinical Systems",
+        items: ["PACS / DICOM Viewers"]
+      }
     ],
     softSkills: [
-      { title: "Clinical Empathy & Patient Care", desc: "Prioritizing patient safety, clear communication, and dignified care during diagnostic examinations." },
-      { title: "Interdisciplinary Collaboration", desc: "Communicating effectively across radiographers, clinical teams, physicians, and data engineers." },
-      { title: "Research & Analytical Rigor", desc: "Applying systematic hypothesis testing, evaluation metrics (ROC/AUC, sensitivity), and validation." },
-      { title: "Ethical AI & Privacy", desc: "Strict adherence to patient privacy, DICOM de-identification standards, and clinical AI governance." }
+      "Clinical Empathy & Patient Care",
+      "Interdisciplinary Collaboration",
+      "Research & Analytical Rigor",
+      "Ethical AI & Privacy"
     ]
   };
 

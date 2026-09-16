@@ -135,57 +135,60 @@ function initSkillsSection(skillsData) {
   const disciplinesContainer = document.getElementById('skillsDisciplines');
   if (disciplinesContainer && skillsData.disciplines) {
     disciplinesContainer.innerHTML = skillsData.disciplines.map(item => `
-      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-rose-900/40 dark:hover:border-rose-500/40 transition-colors flex items-start gap-3.5">
-        <div class="w-10 h-10 rounded-lg bg-rose-50 dark:bg-rose-950/60 text-[#700B1A] dark:text-rose-400 flex items-center justify-center shrink-0 text-base">
+      <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-rose-900/40 dark:hover:border-rose-500/40 transition-colors flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-950/60 text-[#700B1A] dark:text-rose-400 flex items-center justify-center shrink-0 text-xs">
+            <i class="${item.icon}"></i>
+          </div>
+          <h4 class="font-semibold text-slate-900 dark:text-white text-xs sm:text-sm">${item.name}</h4>
+        </div>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-rose-50 dark:bg-rose-950/70 text-[#700B1A] dark:text-rose-400 border border-rose-200/60 dark:border-rose-800/60 shrink-0">
+          ${item.level}
+        </span>
+      </div>
+    `).join('');
+  }
+
+  // 2. Languages & Data Environments
+  const languagesContainer = document.getElementById('skillsLanguages');
+  if (languagesContainer && skillsData.languages) {
+    languagesContainer.innerHTML = skillsData.languages.map(item => `
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-cyan-500/40 dark:hover:border-cyan-500/40 transition-colors flex items-start gap-3.5">
+        <div class="w-9 h-9 rounded-lg bg-cyan-50 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0 text-base">
           <i class="${item.icon}"></i>
         </div>
         <div>
           <h4 class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base">${item.name}</h4>
-          <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> ${item.level}
-          </span>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">${item.detail}</p>
         </div>
       </div>
     `).join('');
   }
 
-  // 2. Languages
-  const languagesContainer = document.getElementById('skillsLanguages');
-  if (languagesContainer && skillsData.languages) {
-    languagesContainer.innerHTML = skillsData.languages.map(item => `
-      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
-        <div class="flex justify-between items-center mb-1.5">
-          <span class="font-semibold text-slate-900 dark:text-white text-sm">${item.name}</span>
-          <span class="text-xs text-[#700B1A] dark:text-rose-400 font-medium">${item.level}</span>
-        </div>
-        <p class="text-xs text-slate-500 dark:text-slate-400">${item.experience}</p>
-      </div>
-    `).join('');
-  }
-
-  // 3. Frameworks & Tools Pills
+  // 3. Frameworks & Tooling (Grouped exactly as specified)
   const techPillsContainer = document.getElementById('skillsTechPills');
-  if (techPillsContainer) {
-    const frameworks = (skillsData.frameworks || []).map(f => ({ ...f, type: 'Framework' }));
-    const tools = (skillsData.tools || []).map(t => ({ ...t, type: 'Tool' }));
-    const allTools = [...frameworks, ...tools];
-
-    techPillsContainer.innerHTML = allTools.map(t => `
-      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/80 hover:border-[#700B1A] dark:hover:border-rose-400 transition-colors">
-        <span class="w-1.5 h-1.5 rounded-full ${t.type === 'Framework' ? 'bg-[#700B1A]' : 'bg-[#059669]'}"></span>
-        ${t.name}
-        <span class="text-[10px] text-slate-400 dark:text-slate-500">(${t.category})</span>
-      </span>
+  if (techPillsContainer && skillsData.frameworksAndTools) {
+    techPillsContainer.innerHTML = skillsData.frameworksAndTools.map(group => `
+      <div class="w-full mb-3 last:mb-0">
+        <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1.5">${group.group}</span>
+        <div class="flex flex-wrap gap-1.5">
+          ${group.items.map(item => `
+            <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-[#700B1A] dark:hover:border-rose-400 transition-colors">
+              ${item}
+            </span>
+          `).join('')}
+        </div>
+      </div>
     `).join('');
   }
 
-  // 4. Soft Skills
+  // 4. Soft Skills & Clinical Ethics (Only user's 4 items, clean & crisp)
   const softSkillsContainer = document.getElementById('skillsSoft');
   if (softSkillsContainer && skillsData.softSkills) {
-    softSkillsContainer.innerHTML = skillsData.softSkills.map(s => `
-      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
-        <h4 class="font-semibold text-slate-900 dark:text-white text-sm mb-1">${s.title}</h4>
-        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">${s.desc}</p>
+    softSkillsContainer.innerHTML = skillsData.softSkills.map(skill => `
+      <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+        <span class="w-2 h-2 rounded-full bg-[#059669] shrink-0"></span>
+        <span class="font-medium text-slate-800 dark:text-slate-200 text-xs sm:text-sm">${skill}</span>
       </div>
     `).join('');
   }
