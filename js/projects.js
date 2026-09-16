@@ -246,12 +246,12 @@
   const academicData = {
     education: [
       {
-        degree: "Bachelor of Science in Computer Science",
-        institution: "College of Engineering & Applied Science",
-        period: "2022 — 2026 (Senior Standing)",
-        gpa: "3.92 / 4.00 (Summa Cum Laude Track)",
-        honors: "Dean's High Honors List (6 consecutive semesters), Academic Excellence Scholar",
-        description: "Rigorous honors curriculum with specialized focus in distributed systems, machine learning, algorithm analysis, and scalable web engineering.",
+        degree: "Bachelor of Science in Radiography",
+        institution: "College of Medical Sciences",
+        period: "Undergraduate (In Progress)",
+        gpa: "2.64 CGPA",
+        honors: "Clinical Radiography & Medical Imaging AI Research",
+        description: "Specialized undergraduate study in clinical radiography and medical imaging physics, combined with deep learning, computer vision, and healthcare automation.",
         coursework: [
           "Advanced Data Structures & Algorithms",
           "Operating Systems & Concurrency",
