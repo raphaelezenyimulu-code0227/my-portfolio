@@ -42,8 +42,8 @@
         { label: "False Alarms", value: "-38%" },
         { label: "Inference Latency", value: "<45ms" }
       ],
-      gradient: "from-indigo-600 to-blue-500",
-      badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
+      gradient: "from-[#700B1A] to-[#047857]",
+      badgeColor: "bg-rose-950/20 text-rose-300 border-rose-800/30",
       links: {
         demo: "https://pulsepredict-demo.example.com",
         github: "https://github.com/raphaelezenyimulu-code0227/pulse-predict",
@@ -72,8 +72,8 @@
         { label: "Failover Time", value: "<120ms" },
         { label: "Consensus Uptime", value: "99.99%" }
       ],
-      gradient: "from-cyan-600 to-teal-500",
-      badgeColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      gradient: "from-[#065F46] to-[#881337]",
+      badgeColor: "bg-emerald-950/20 text-emerald-300 border-emerald-800/30",
       links: {
         demo: "https://novacloud-demo.example.com",
         github: "https://github.com/raphaelezenyimulu-code0227/novacloud-orchestrator",
@@ -102,8 +102,8 @@
         { label: "First Contentful Paint", value: "0.6s" },
         { label: "Conversion Lift", value: "+27%" }
       ],
-      gradient: "from-blue-600 to-indigo-600",
-      badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+      gradient: "from-[#800020] to-[#10B981]",
+      badgeColor: "bg-rose-950/20 text-rose-300 border-rose-800/30",
       links: {
         demo: "https://omnicommerce.example.com",
         github: "https://github.com/raphaelezenyimulu-code0227/omnicommerce",
@@ -132,8 +132,8 @@
         { label: "Max Grid Nodes", value: "15,000+" },
         { label: "Traversal Speedup", value: "3.4x" }
       ],
-      gradient: "from-amber-600 to-orange-500",
-      badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+      gradient: "from-[#047857] to-[#700B1A]",
+      badgeColor: "bg-emerald-950/20 text-emerald-300 border-emerald-800/30",
       links: {
         demo: "https://graph-pathfinder.example.com",
         github: "https://github.com/raphaelezenyimulu-code0227/graph-pathfinder-engine",
@@ -162,8 +162,8 @@
         { label: "Sensitivity", value: "96.8%" },
         { label: "Dataset Size", value: "35k Images" }
       ],
-      gradient: "from-emerald-600 to-teal-500",
-      badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+      gradient: "from-[#9F1239] to-[#059669]",
+      badgeColor: "bg-rose-950/20 text-rose-300 border-rose-800/30",
       links: {
         demo: "https://neuroscan-research.example.com",
         github: "https://github.com/raphaelezenyimulu-code0227/neuroscan-vision",
@@ -192,8 +192,8 @@
         { label: "DORA Visibility", value: "100%" },
         { label: "Active Repos", value: "50+" }
       ],
-      gradient: "from-purple-600 to-indigo-500",
-      badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+      gradient: "from-[#700B1A] to-[#0D9488]",
+      badgeColor: "bg-teal-950/20 text-teal-300 border-teal-800/30",
       links: {
         demo: "https://devpulse.example.com",
         github: "https://github.com/raphaelezenyimulu-code0227/devpulse-analytics",

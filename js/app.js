@@ -135,8 +135,8 @@ function initSkillsSection(skillsData) {
   const disciplinesContainer = document.getElementById('skillsDisciplines');
   if (disciplinesContainer && skillsData.disciplines) {
     disciplinesContainer.innerHTML = skillsData.disciplines.map(item => `
-      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-indigo-500/40 dark:hover:border-indigo-500/40 transition-colors flex items-start gap-3.5">
-        <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0 text-base">
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-rose-900/40 dark:hover:border-rose-500/40 transition-colors flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-lg bg-rose-50 dark:bg-rose-950/60 text-[#700B1A] dark:text-rose-400 flex items-center justify-center shrink-0 text-base">
           <i class="${item.icon}"></i>
         </div>
         <div>
@@ -156,7 +156,7 @@ function initSkillsSection(skillsData) {
       <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
         <div class="flex justify-between items-center mb-1.5">
           <span class="font-semibold text-slate-900 dark:text-white text-sm">${item.name}</span>
-          <span class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">${item.level}</span>
+          <span class="text-xs text-[#700B1A] dark:text-rose-400 font-medium">${item.level}</span>
         </div>
         <p class="text-xs text-slate-500 dark:text-slate-400">${item.experience} experience</p>
       </div>
@@ -171,8 +171,8 @@ function initSkillsSection(skillsData) {
     const allTools = [...frameworks, ...tools];
 
     techPillsContainer.innerHTML = allTools.map(t => `
-      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/80 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors">
-        <span class="w-1.5 h-1.5 rounded-full ${t.type === 'Framework' ? 'bg-indigo-500' : 'bg-cyan-500'}"></span>
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/80 hover:border-[#700B1A] dark:hover:border-rose-400 transition-colors">
+        <span class="w-1.5 h-1.5 rounded-full ${t.type === 'Framework' ? 'bg-[#700B1A]' : 'bg-[#059669]'}"></span>
         ${t.name}
         <span class="text-[10px] text-slate-400 dark:text-slate-500">(${t.category})</span>
       </span>
@@ -231,7 +231,7 @@ function initProjectsSection(projectsData) {
     }
 
     container.innerHTML = filtered.map(project => `
-      <article class="card-hover-effect flex flex-col bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/90 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-indigo-500/40 dark:hover:border-indigo-500/40 overflow-hidden transition-all duration-300" data-id="${project.id}">
+      <article class="card-hover-effect flex flex-col bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/90 dark:border-slate-700/70 shadow-sm hover:shadow-xl hover:border-[#700B1A]/40 dark:hover:border-rose-500/40 overflow-hidden transition-all duration-300" data-id="${project.id}">
         <!-- Card Header Banner -->
         <div class="relative h-44 bg-gradient-to-r ${project.gradient} p-5 flex flex-col justify-between overflow-hidden">
           <div class="absolute -right-6 -bottom-8 opacity-15 text-white text-9xl select-none pointer-events-none font-mono">
@@ -257,7 +257,7 @@ function initProjectsSection(projectsData) {
 
         <!-- Card Body -->
         <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors mb-2 cursor-pointer project-card-title" data-id="${project.id}">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white hover:text-[#700B1A] dark:hover:text-rose-400 transition-colors mb-2 cursor-pointer project-card-title" data-id="${project.id}">
             ${project.title}
           </h3>
           
@@ -269,7 +269,7 @@ function initProjectsSection(projectsData) {
           <div class="grid grid-cols-3 gap-2 py-3 px-3.5 mb-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 text-center">
             ${project.metrics.map(m => `
               <div>
-                <span class="block text-xs font-bold text-indigo-600 dark:text-indigo-400">${m.value}</span>
+                <span class="block text-xs font-bold text-[#700B1A] dark:text-rose-400">${m.value}</span>
                 <span class="block text-[10px] text-slate-500 dark:text-slate-400 font-medium truncate">${m.label}</span>
               </div>
             `).join('')}
@@ -291,18 +291,18 @@ function initProjectsSection(projectsData) {
 
           <!-- Card Actions -->
           <div class="pt-4 border-t border-slate-100 dark:border-slate-700/80 flex items-center justify-between gap-2">
-            <button type="button" class="read-casestudy-btn inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors" data-id="${project.id}">
+            <button type="button" class="read-casestudy-btn inline-flex items-center gap-1.5 text-xs font-semibold text-[#700B1A] dark:text-rose-400 hover:text-[#5A0815] dark:hover:text-rose-300 transition-colors" data-id="${project.id}">
               Read Case Study <i class="fa-solid fa-arrow-right text-[11px] transition-transform"></i>
             </button>
 
             <div class="flex items-center gap-1">
               ${project.links.demo ? `
-                <a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" aria-label="Open Live Demo">
+                <a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#700B1A] dark:hover:text-rose-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" aria-label="Open Live Demo">
                   <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                 </a>
               ` : ''}
               ${project.links.github ? `
-                <a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" aria-label="Open GitHub Repository">
+                <a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#700B1A] dark:hover:text-rose-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" aria-label="Open GitHub Repository">
                   <i class="fa-brands fa-github text-sm"></i>
                 </a>
               ` : ''}
@@ -322,15 +322,18 @@ function initProjectsSection(projectsData) {
   }
 
   // Filter Buttons
+  const activeFilterClasses = ['bg-gradient-to-r', 'from-[#700B1A]', 'to-[#047857]', 'text-white', 'shadow-md', 'shadow-rose-950/20'];
+  const inactiveFilterClasses = ['bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300'];
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => {
-        b.classList.remove('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-500/20');
-        b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        b.classList.remove(...activeFilterClasses);
+        b.classList.add(...inactiveFilterClasses);
       });
 
-      btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
-      btn.classList.add('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-500/20');
+      btn.classList.remove(...inactiveFilterClasses);
+      btn.classList.add(...activeFilterClasses);
 
       currentCategory = btn.getAttribute('data-category');
       renderProjects();
@@ -410,7 +413,7 @@ function openCaseStudyModal(projectId, projectsData) {
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
           ${project.metrics.map(m => `
             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80">
-              <span class="text-xl font-extrabold text-indigo-600 dark:text-indigo-400 block">${m.value}</span>
+              <span class="text-xl font-extrabold text-[#700B1A] dark:text-rose-400 block">${m.value}</span>
               <span class="text-xs text-slate-600 dark:text-slate-300 font-medium">${m.label}</span>
             </div>
           `).join('')}
@@ -465,11 +468,11 @@ function openCaseStudyModal(projectId, projectsData) {
       </div>
 
       <!-- Key Takeaway / Lessons Learned -->
-      <div class="p-4 rounded-xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200/60 dark:border-indigo-900/50">
-        <h4 class="text-xs font-bold uppercase tracking-wider text-indigo-900 dark:text-indigo-300 mb-1 flex items-center gap-1.5">
+      <div class="p-4 rounded-xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200/60 dark:border-rose-900/50">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1.5">
           <i class="fa-solid fa-lightbulb text-amber-500"></i> Engineering Retrospective & Key Takeaway
         </h4>
-        <p class="text-xs sm:text-sm text-indigo-950 dark:text-indigo-200 leading-relaxed">
+        <p class="text-xs sm:text-sm text-rose-950 dark:text-rose-200 leading-relaxed">
           ${project.keyTakeaways}
         </p>
       </div>
@@ -548,7 +551,7 @@ function initAcademicSection(academicData) {
     eduContainer.innerHTML = academicData.education.map(edu => `
       <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200/90 dark:border-slate-700/80 shadow-sm">
         <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-50 dark:bg-rose-950/70 text-[#700B1A] dark:text-rose-400 border border-rose-200/60 dark:border-rose-800/60">
             <i class="fa-solid fa-graduation-cap"></i> ${edu.period}
           </span>
           <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-0.5 rounded-md">
@@ -562,7 +565,7 @@ function initAcademicSection(academicData) {
         <p class="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-2">
           ${edu.institution}
         </p>
-        <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium mb-4">
+        <p class="text-xs text-[#700B1A] dark:text-rose-400 font-medium mb-4">
           <i class="fa-solid fa-award mr-1"></i> ${edu.honors}
         </p>
 
@@ -577,7 +580,7 @@ function initAcademicSection(academicData) {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             ${edu.coursework.map(c => `
               <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300 p-2 rounded-lg bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800">
-                <i class="fa-solid fa-check text-indigo-500 text-[10px]"></i>
+                <i class="fa-solid fa-check text-[#700B1A] dark:text-rose-400 text-[10px]"></i>
                 <span>${c}</span>
               </div>
             `).join('')}
@@ -591,7 +594,7 @@ function initAcademicSection(academicData) {
   if (certsContainer && academicData.certifications) {
     certsContainer.innerHTML = academicData.certifications.map(cert => `
       <div class="p-4 rounded-xl bg-white dark:bg-slate-800/90 border border-slate-200/90 dark:border-slate-700/80 shadow-sm flex items-start gap-3.5">
-        <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0 text-lg">
+        <div class="w-10 h-10 rounded-lg bg-rose-50 dark:bg-rose-950/60 text-[#700B1A] dark:text-rose-400 flex items-center justify-center shrink-0 text-lg">
           <i class="${cert.icon}"></i>
         </div>
         <div class="flex-1">

@@ -40,7 +40,7 @@ html {
 
 /* Accessible focus outlines */
 :focus-visible {
-  outline: 2px solid #6366f1;
+  outline: 2px solid #700B1A;
   outline-offset: 3px;
 }
 
@@ -69,15 +69,15 @@ html {
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Gradient text utility */
+/* Gradient text utility (Oxblood to Green) */
 .text-gradient-primary {
-  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  background: linear-gradient(135deg, #700B1A 0%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .dark .text-gradient-primary {
-  background: linear-gradient(135deg, #818cf8 0%, #38bdf8 100%);
+  background: linear-gradient(135deg, #fb7185 0%, #34d399 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -169,7 +169,7 @@ body.modal-open {
   bottom: 0;
   left: 1.25rem;
   width: 2px;
-  background: linear-gradient(to bottom, #6366f1, #0ea5e9, transparent);
+  background: linear-gradient(to bottom, #700B1A, #059669, transparent);
 }
 
 @media (min-width: 768px) {
