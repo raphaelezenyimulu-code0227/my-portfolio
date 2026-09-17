@@ -153,13 +153,14 @@ function initSkillsSection(skillsData) {
   const languagesContainer = document.getElementById('skillsLanguages');
   if (languagesContainer && skillsData.languages) {
     languagesContainer.innerHTML = skillsData.languages.map(item => `
-      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-cyan-500/40 dark:hover:border-cyan-500/40 transition-colors flex items-start gap-3.5">
-        <div class="w-9 h-9 rounded-lg bg-cyan-50 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0 text-base">
+      <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-emerald-500/40 dark:hover:border-emerald-500/40 transition-colors flex items-start gap-3">
+        <div class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-[#059669] dark:text-emerald-400 flex items-center justify-center shrink-0 text-xs mt-0.5">
           <i class="${item.icon}"></i>
         </div>
-        <div>
-          <h4 class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base">${item.name}</h4>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">${item.detail}</p>
+        <div class="leading-snug">
+          <span class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">${item.name}</span>
+          <span class="text-slate-400 dark:text-slate-500 mx-1 font-normal">—</span>
+          <span class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-normal">${item.detail}</span>
         </div>
       </div>
     `).join('');
