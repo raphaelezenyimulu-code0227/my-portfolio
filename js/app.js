@@ -143,7 +143,7 @@ function initSkillsSection(skillsData) {
           <h4 class="font-semibold text-slate-900 dark:text-white text-xs sm:text-sm">${item.name}</h4>
         </div>
         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-rose-50 dark:bg-rose-950/70 text-[#700B1A] dark:text-rose-400 border border-rose-200/60 dark:border-rose-800/60 shrink-0">
-          ${item.level}
+          ${item.level.startsWith('(') ? item.level : `(${item.level})`}
         </span>
       </div>
     `).join('');

@@ -204,12 +204,12 @@
 
   const skillsData = {
     disciplines: [
-      { name: "Medical Image Analysis", level: "Specialist", icon: "fa-solid fa-microscope" },
-      { name: "Clinical Radiography", level: "Clinical Core", icon: "fa-solid fa-x-ray" },
-      { name: "Healthcare Data Analytics", level: "Specialist", icon: "fa-solid fa-chart-line" },
-      { name: "Computer Vision", level: "Advanced", icon: "fa-solid fa-eye" },
-      { name: "Deep Learning", level: "Advanced", icon: "fa-solid fa-brain" },
-      { name: "Workflow Automation", level: "Proficient", icon: "fa-solid fa-gears" }
+      { name: "Medical Image Analysis", level: "(Specialist)", icon: "fa-solid fa-microscope" },
+      { name: "Clinical Radiography", level: "(Clinical Core)", icon: "fa-solid fa-x-ray" },
+      { name: "Healthcare Data Analytics", level: "(Specialist)", icon: "fa-solid fa-chart-line" },
+      { name: "Computer Vision", level: "(Advanced)", icon: "fa-solid fa-eye" },
+      { name: "Deep Learning", level: "(Advanced)", icon: "fa-solid fa-brain" },
+      { name: "Workflow Automation", level: "(Proficient)", icon: "fa-solid fa-gears" }
     ],
     languages: [
       { name: "Python", detail: "Medical image processing & deep learning", icon: "fa-brands fa-python" },
